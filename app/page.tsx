@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { ContactForm } from "@/components/contact-form"
-import { ProjectCard } from "@/components/project-card"
-import { ExperienceItem } from "@/components/experience-item"
-import { AboutItem } from "@/components/about-item"
-import { Footer } from "@/components/footer"
-import { ScrollFade } from "@/components/scroll-fade"
+import Link from "next/link";
+import { ContactForm } from "@/components/contact-form";
+import { ProjectCard } from "@/components/project-card";
+import { ExperienceItem } from "@/components/experience-item";
+import { AboutItem } from "@/components/about-item";
+import { Footer } from "@/components/footer";
+import { ScrollFade } from "@/components/scroll-fade";
 
 export default function Home() {
   return (
@@ -24,18 +24,35 @@ export default function Home() {
       {/* Header/Navigation - Floating with blur effect */}
       <div className="max-w-[1032px] fixed mx-auto top-6 flex justify-center w-full z-10">
         <header className="flex items-center justify-between px-6 py-3 rounded-full bg-secondary/70 backdrop-blur-md shadow-lg border border-gridline w-full">
-          <Link href="" className="text-body-md hover:text-muted-foreground transition-colors">Eddie Zhuang</Link>
+          <Link
+            href=""
+            className="text-body-md hover:text-muted-foreground transition-colors"
+          >
+            Eddie Zhuang
+          </Link>
           <nav className="flex space-x-12">
-            <Link href="#about" className="text-body-sm hover:text-muted-foreground transition-colors">
+            <Link
+              href="#about"
+              className="text-body-sm hover:text-muted-foreground transition-colors"
+            >
               About
             </Link>
-            <Link href="#experience" className="text-body-sm hover:text-muted-foreground transition-colors">
+            <Link
+              href="#experience"
+              className="text-body-sm hover:text-muted-foreground transition-colors"
+            >
               Experience
             </Link>
-            <Link href="#projects" className="text-body-sm hover:text-muted-foreground transition-colors">
+            <Link
+              href="#projects"
+              className="text-body-sm hover:text-muted-foreground transition-colors"
+            >
               Projects
             </Link>
-            <Link href="#contact" className="text-body-sm hover:text-muted-foreground transition-colors">
+            <Link
+              href="#contact"
+              className="text-body-sm hover:text-muted-foreground transition-colors"
+            >
               Contact
             </Link>
           </nav>
@@ -50,7 +67,9 @@ export default function Home() {
             <h1 className="text-heading-xl mb-2">Eddie Zhuang</h1>
           </ScrollFade>
           <ScrollFade delay={2}>
-            <p className="text-heading-md text-muted-foreground">Computer science student at McMaster University</p>
+            <p className="text-heading-md text-muted-foreground">
+              Computer science student at McMaster University
+            </p>
           </ScrollFade>
         </section>
 
@@ -147,11 +166,18 @@ export default function Home() {
 
         {/* Contact Section */}
         <ScrollFade>
-          <section id="contact" className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <section
+            id="contact"
+            className="grid grid-cols-1 md:grid-cols-2 gap-12"
+          >
             <div>
               <h2 className="text-heading-lg mb-6">Contact</h2>
-              <p className="text-body-md text-muted-foreground mb-2">Have an opportunity in mind, or just want to chat?</p>
-              <p className="text-body-md text-muted-foreground">Feel free to send me a message.</p>
+              <p className="text-body-md text-muted-foreground mb-2">
+                Have an opportunity in mind, or just want to chat?
+              </p>
+              <p className="text-body-md text-muted-foreground">
+                Feel free to send me a message.
+              </p>
             </div>
             <ContactForm />
           </section>
@@ -161,5 +187,5 @@ export default function Home() {
       {/* Footer */}
       <Footer />
     </div>
-  )
+  );
 }
