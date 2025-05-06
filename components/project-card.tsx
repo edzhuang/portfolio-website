@@ -9,18 +9,18 @@ interface ProjectCardProps {
 
 export function ProjectCard({ title, description, imageUrl, className = "" }: ProjectCardProps) {
   return (
-    <div className={`space-y-2 ${className}`}>
-      <div className="rounded-lg overflow-hidden border border-gridline">
+    <div className={`flex flex-col gap-4 ${className}`}>
+      <div className="rounded-3xl overflow-hidden border border-gridline">
         <Image
           src={imageUrl || "/placeholder.svg"}
           alt={title}
           width={400}
-          height={200}
+          height={225}
           className="w-full h-auto object-cover"
         />
       </div>
-      <h3 className="text-foreground font-normal">{title}</h3>
-      <p className="text-muted-foreground text-sm">{description}</p>
+      <h3 className="text-heading-sm text-foreground">{title}</h3>
+      <p className="text-body-md text-muted-foreground">{description}</p>
     </div>
   )
 }

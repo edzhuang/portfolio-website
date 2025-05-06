@@ -60,8 +60,8 @@ export default function Home() {
 
         {/* About Section */}
         <ScrollFade>
-          <section id="about">
-            <h2 className="text-heading-lg mb-8">About</h2>
+          <section id="about" className="flex flex-col gap-12">
+            <h2 className="text-heading-lg">About</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
               <ScrollFade delay={1}>
                 <AboutItem text="Short point whose bullet picks out a section of the grid lines" />
@@ -82,7 +82,7 @@ export default function Home() {
         {/* Experience Section */}
         <ScrollFade>
           <section id="experience" className="flex flex-col gap-12">
-            <h2 className="text-heading-lg mb-8">Experience</h2>
+            <h2 className="text-heading-lg">Experience</h2>
             <div className="flex flex-col gap-16">
               <ScrollFade delay={1}>
                 <ExperienceItem
@@ -116,7 +116,7 @@ export default function Home() {
         <ScrollFade>
           <section id="projects">
             <h2 className="text-heading-lg mb-8">Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 [&>*]:aspect-video">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 [&>*]:aspect-video">
               <ScrollFade delay={1}>
                 <ProjectCard
                   title="Project Name"
