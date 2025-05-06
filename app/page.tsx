@@ -1,12 +1,12 @@
 "use client";
 
-import Link from "next/link";
 import { ContactForm } from "@/components/contact-form";
 import { ProjectCard } from "@/components/project-card";
 import { ExperienceItem } from "@/components/experience-item";
 import { AboutItem } from "@/components/about-item";
 import { Footer } from "@/components/footer";
 import { ScrollFade } from "@/components/scroll-fade";
+import { Header } from "@/components/header";
 
 export default function Home() {
   return (
@@ -22,43 +22,8 @@ export default function Home() {
       </div>
 
       {/* Header/Navigation - Floating with blur effect */}
-      <div className="fixed mx-auto w-full top-6 px-4 flex justify-center z-10">
-        <div className="max-w-[1080px] w-full px-6">
-          <header className="flex items-center justify-between w-full px-6 py-3 rounded-full bg-secondary/70 backdrop-blur-md shadow-lg border border-gridline">
-            <Link
-              href=""
-              className="text-body-md hover:text-muted-foreground transition-colors"
-            >
-              Eddie Zhuang
-            </Link>
-            <nav className="flex space-x-12">
-              <Link
-                href="#about"
-                className="text-body-sm hover:text-muted-foreground transition-colors"
-              >
-                About
-              </Link>
-              <Link
-                href="#experience"
-                className="text-body-sm hover:text-muted-foreground transition-colors"
-              >
-                Experience
-              </Link>
-              <Link
-                href="#projects"
-                className="text-body-sm hover:text-muted-foreground transition-colors"
-              >
-                Projects
-              </Link>
-              <Link
-                href="#contact"
-                className="text-body-sm hover:text-muted-foreground transition-colors"
-              >
-                Contact
-              </Link>
-            </nav>
-          </header>
-        </div>
+      <div className={`fixed w-full top-6 px-10 flex justify-center z-10`}>
+        <Header />
       </div>
 
       {/* Content Container */}
