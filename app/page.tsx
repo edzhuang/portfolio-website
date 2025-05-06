@@ -151,11 +151,11 @@ export default function Home() {
 
         {/* Contact Section */}
         <ScrollFade>
-          <section id="contact" className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <section id="contact" className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-heading-lg mb-4">Contact</h2>
-              <p className="text-muted-foreground mb-2">Have an opportunity in mind, or just want to chat?</p>
-              <p className="text-muted-foreground">Feel free to send me a message.</p>
+              <h2 className="text-heading-lg mb-6">Contact</h2>
+              <p className="text-body-md text-muted-foreground mb-2">Have an opportunity in mind, or just want to chat?</p>
+              <p className="text-body-md text-muted-foreground">Feel free to send me a message.</p>
             </div>
             <ContactForm />
           </section>

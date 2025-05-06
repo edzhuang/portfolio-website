@@ -26,14 +26,14 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-6">
       <Input
         type="text"
         name="name"
         placeholder="Name"
         value={formData.name}
         onChange={handleChange}
-        className="bg-card border-gridline text-foreground"
+        className="bg-card border-gridline"
       />
       <Input
         type="email"
@@ -41,18 +41,18 @@ export function ContactForm() {
         placeholder="Email"
         value={formData.email}
         onChange={handleChange}
-        className="bg-card border-gridline text-foreground"
+        className="bg-card border-gridline"
       />
       <Textarea
         name="message"
         placeholder="Message"
         value={formData.message}
         onChange={handleChange}
-        className="bg-card border-gridline text-foreground min-h-[100px]"
+        className="bg-card border-gridline min-h-40"
       />
       <Button
         type="submit"
-        className="bg-card hover:bg-card/80 text-foreground border border-gridline rounded-none px-4 py-2"
+        className="bg-primary hover:bg-primary/80 text-primary-foreground border border-gridline px-6 py-3 h-min w-min"
       >
         Send
       </Button>
