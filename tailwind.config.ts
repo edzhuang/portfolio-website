@@ -24,7 +24,7 @@ const config = {
         'heading-lg': ['3rem', { fontWeight: '700' }],
         'heading-md': ['2rem', { fontWeight: '700' }],
         'heading-sm': ['1.5rem', { fontWeight: '700' }],
-        'body-md': ['1.25rem', { fontWeight: '400' }],
+        'body-md': ['1.25rem', { fontWeight: '500' }],
         'body-sm': ['1rem', { fontWeight: '500' }],
       },
       fontFamily: {

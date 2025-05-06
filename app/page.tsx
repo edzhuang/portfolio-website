@@ -26,19 +26,19 @@ export default function Home() {
       <div className="max-w-[1080px] mx-auto px-6 flex flex-col gap-40">
         {/* Header/Navigation - Floating with blur effect */}
         <div className="sticky top-6 flex justify-center w-full z-10">
-          <header className="flex items-center justify-between px-6 py-4 rounded-full bg-secondary/70 backdrop-blur-md shadow-lg border border-gridline w-full">
-            <div className="text-heading-sm">Eddie Zhuang</div>
+          <header className="flex items-center justify-between px-6 py-3 rounded-full bg-secondary/70 backdrop-blur-md shadow-lg border border-gridline w-full">
+            <div className="text-body-md">Eddie Zhuang</div>
             <nav className="flex space-x-12">
-              <Link href="#projects" className="leading-[27px] text-body-md hover:text-muted-foreground transition-colors">
+              <Link href="#projects" className="text-body-sm hover:text-muted-foreground transition-colors">
                 Projects
               </Link>
-              <Link href="#experience" className="text-body-md hover:text-muted-foreground transition-colors">
+              <Link href="#experience" className="text-body-sm hover:text-muted-foreground transition-colors">
                 Experience
               </Link>
-              <Link href="#now" className="text-body-md hover:text-muted-foreground transition-colors">
+              <Link href="#now" className="text-body-sm hover:text-muted-foreground transition-colors">
                 Now
               </Link>
-              <Link href="#contact" className="text-body-md hover:text-muted-foreground transition-colors">
+              <Link href="#contact" className="text-body-sm hover:text-muted-foreground transition-colors">
                 Contact
               </Link>
             </nav>
@@ -57,7 +57,7 @@ export default function Home() {
         <ScrollFade>
           <section id="projects">
             <h2 className="text-heading-lg mb-8">Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 [&>*]:aspect-video">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 [&>*]:aspect-video">
               <ScrollFade delay={1}>
                 <ProjectCard
                   title="Project Name"
