@@ -4,7 +4,7 @@ import Link from "next/link"
 import { ContactForm } from "@/components/contact-form"
 import { ProjectCard } from "@/components/project-card"
 import { ExperienceItem } from "@/components/experience-item"
-import { NowItem } from "@/components/now-item"
+import { AboutItem } from "@/components/about-item"
 import { SocialLinks } from "@/components/social-links"
 import { Footer } from "@/components/footer"
 import { ScrollFade } from "@/components/scroll-fade"
@@ -29,14 +29,14 @@ export default function Home() {
           <header className="flex items-center justify-between px-6 py-3 rounded-full bg-secondary/70 backdrop-blur-md shadow-lg border border-gridline w-full">
             <div className="text-body-md">Eddie Zhuang</div>
             <nav className="flex space-x-12">
-              <Link href="#projects" className="text-body-sm hover:text-muted-foreground transition-colors">
-                Projects
+              <Link href="#about" className="text-body-sm hover:text-muted-foreground transition-colors">
+                About
               </Link>
               <Link href="#experience" className="text-body-sm hover:text-muted-foreground transition-colors">
                 Experience
               </Link>
-              <Link href="#now" className="text-body-sm hover:text-muted-foreground transition-colors">
-                Now
+              <Link href="#projects" className="text-body-sm hover:text-muted-foreground transition-colors">
+                Projects
               </Link>
               <Link href="#contact" className="text-body-sm hover:text-muted-foreground transition-colors">
                 Contact
@@ -46,45 +46,31 @@ export default function Home() {
         </div>
 
         {/* Hero Section */}
-        <ScrollFade>
-          <section className="flex flex-col gap-6">
+        <section className="flex flex-col gap-6">
+          <ScrollFade delay={1}>
             <h1 className="text-heading-xl mb-2">Eddie Zhuang</h1>
+          </ScrollFade>
+          <ScrollFade delay={2}>
             <p className="text-heading-md text-muted-foreground">Computer science student at McMaster University</p>
-          </section>
-        </ScrollFade>
+          </ScrollFade>
+        </section>
 
-        {/* Projects Section */}
+        {/* About Section */}
         <ScrollFade>
-          <section id="projects">
-            <h2 className="text-heading-lg mb-8">Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 [&>*]:aspect-video">
+          <section id="about">
+            <h2 className="text-heading-lg mb-8">About</h2>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
               <ScrollFade delay={1}>
-                <ProjectCard
-                  title="Project Name"
-                  description="This is the project description. It gives a short description of the project."
-                  imageUrl="/placeholder.svg?height=225&width=400"
-                />
+                <AboutItem text="Short point whose bullet picks out a section of the grid lines" />
               </ScrollFade>
               <ScrollFade delay={2}>
-                <ProjectCard
-                  title="Project Name"
-                  description="This is the project description. It gives a short description of the project."
-                  imageUrl="/placeholder.svg?height=225&width=400"
-                />
+                <AboutItem text="Short point whose bullet picks out a section of the grid lines" />
               </ScrollFade>
               <ScrollFade delay={3}>
-                <ProjectCard
-                  title="Project Name"
-                  description="This is the project description. It gives a short description of the project."
-                  imageUrl="/placeholder.svg?height=225&width=400"
-                />
+                <AboutItem text="Short point whose bullet picks out a section of the grid lines" />
               </ScrollFade>
               <ScrollFade delay={4}>
-                <ProjectCard
-                  title="Project Name"
-                  description="This is the project description. It gives a short description of the project."
-                  imageUrl="/placeholder.svg?height=225&width=400"
-                />
+                <AboutItem text="Short point whose bullet picks out a section of the grid lines" />
               </ScrollFade>
             </div>
           </section>
@@ -123,19 +109,38 @@ export default function Home() {
           </section>
         </ScrollFade>
 
-        {/* Now Section */}
+        {/* Projects Section */}
         <ScrollFade>
-          <section id="now">
-            <h2 className="text-heading-lg mb-8">Now</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <section id="projects">
+            <h2 className="text-heading-lg mb-8">Projects</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 [&>*]:aspect-video">
               <ScrollFade delay={1}>
-                <NowItem text="Short point whose bullet picks out a section of the grid lines" />
+                <ProjectCard
+                  title="Project Name"
+                  description="This is the project description. It gives a short description of the project."
+                  imageUrl="/placeholder.svg?height=225&width=400"
+                />
               </ScrollFade>
               <ScrollFade delay={2}>
-                <NowItem text="Short point whose bullet picks out a section of the grid lines" />
+                <ProjectCard
+                  title="Project Name"
+                  description="This is the project description. It gives a short description of the project."
+                  imageUrl="/placeholder.svg?height=225&width=400"
+                />
               </ScrollFade>
               <ScrollFade delay={3}>
-                <NowItem text="Short point whose bullet picks out a section of the grid lines" />
+                <ProjectCard
+                  title="Project Name"
+                  description="This is the project description. It gives a short description of the project."
+                  imageUrl="/placeholder.svg?height=225&width=400"
+                />
+              </ScrollFade>
+              <ScrollFade delay={4}>
+                <ProjectCard
+                  title="Project Name"
+                  description="This is the project description. It gives a short description of the project."
+                  imageUrl="/placeholder.svg?height=225&width=400"
+                />
               </ScrollFade>
             </div>
           </section>

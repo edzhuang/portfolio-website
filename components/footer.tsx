@@ -7,8 +7,8 @@ export function Footer() {
         <div className="text-foreground font-normal">Landing</div>
         <ul className="space-y-1 text-sm">
           <li>
-            <Link href="#projects" className="text-muted-foreground hover:text-foreground transition-colors">
-              Projects
+            <Link href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
+              About
             </Link>
           </li>
           <li>
@@ -17,8 +17,8 @@ export function Footer() {
             </Link>
           </li>
           <li>
-            <Link href="#now" className="text-muted-foreground hover:text-foreground transition-colors">
-              Now
+            <Link href="#projects" className="text-muted-foreground hover:text-foreground transition-colors">
+              Projects
             </Link>
           </li>
           <li>
