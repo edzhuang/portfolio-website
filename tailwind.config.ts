@@ -26,6 +26,7 @@ const config = {
         'heading-sm': ['1.5rem', { fontWeight: '700' }],
         'body-md': ['1.25rem', { fontWeight: '500' }],
         'body-sm': ['1rem', { fontWeight: '500' }],
+        'footer-heading': ['1rem', { fontWeight: '700' }],
       },
       fontFamily: {
         sans: ['var(--font-satoshi)'],
