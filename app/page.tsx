@@ -56,7 +56,7 @@ export default function Home() {
         {/* Projects Section */}
         <ScrollFade>
           <section id="projects">
-            <h2 className="text-heading-xl mb-8">Projects</h2>
+            <h2 className="text-heading-lg mb-8">Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 [&>*]:aspect-video">
               <ScrollFade delay={1}>
                 <ProjectCard
@@ -93,7 +93,7 @@ export default function Home() {
         {/* Experience Section */}
         <ScrollFade>
           <section id="experience">
-            <h2 className="text-heading-xl mb-8">Experience</h2>
+            <h2 className="text-heading-lg mb-8">Experience</h2>
             <div className="space-y-12">
               <ScrollFade delay={1}>
                 <ExperienceItem
@@ -126,7 +126,7 @@ export default function Home() {
         {/* Now Section */}
         <ScrollFade>
           <section id="now">
-            <h2 className="text-heading-xl mb-8">Now</h2>
+            <h2 className="text-heading-lg mb-8">Now</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <ScrollFade delay={1}>
                 <NowItem text="Short point whose bullet picks out a section of the grid lines" />
@@ -145,7 +145,7 @@ export default function Home() {
         <ScrollFade>
           <section id="contact" className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h2 className="text-heading-xl mb-4">Contact</h2>
+              <h2 className="text-heading-lg mb-4">Contact</h2>
               <p className="text-muted-foreground mb-2">Have an opportunity in mind, or just want to chat?</p>
               <p className="text-muted-foreground">Feel free to send me a message.</p>
             </div>
