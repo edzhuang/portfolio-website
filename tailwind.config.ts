@@ -19,6 +19,17 @@ const config = {
       },
     },
     extend: {
+      fontSize: {
+        'heading-xl': ['4rem', { fontWeight: '700' }],
+        'heading-lg': ['3rem', { fontWeight: '700' }],
+        'heading-md': ['2rem', { fontWeight: '700' }],
+        'heading-sm': ['1.5rem', { fontWeight: '700' }],
+        'body-md': ['1.25rem', { fontWeight: '400' }],
+        'body-sm': ['1rem', { fontWeight: '500' }],
+      },
+      fontFamily: {
+        sans: ['var(--font-satoshi)'],
+      },
       inset: {
         "1/6": "16.666667%",
         "2/6": "33.333333%",
@@ -30,8 +41,8 @@ const config = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "#08090a",
-        foreground: "#ebebeb",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         gridline: "#505050",
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -47,7 +58,7 @@ const config = {
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
-          foreground: "#aaaaaa",
+          foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
@@ -58,7 +69,7 @@ const config = {
           foreground: "hsl(var(--popover-foreground))",
         },
         card: {
-          DEFAULT: "#1a1a1a",
+          DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
       },

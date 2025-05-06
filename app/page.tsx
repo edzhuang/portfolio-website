@@ -23,22 +23,22 @@ export default function Home() {
       </div>
 
       {/* Content Container */}
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col gap-40">
         {/* Header/Navigation - Floating with blur effect */}
-        <div className="sticky top-6 z-50 flex justify-center w-full">
-          <header className="flex items-center justify-between px-6 py-3 rounded-full bg-background/70 backdrop-blur-md shadow-lg border border-gridline/20 w-full">
-            <div className="text-foreground font-medium">Eddie Zhuang</div>
-            <nav className="flex space-x-6">
-              <Link href="#projects" className="text-foreground hover:text-muted-foreground transition-colors">
+        <div className="sticky top-6 flex justify-center w-full z-10">
+          <header className="flex items-center justify-between px-6 py-3 rounded-full bg-secondary/70 backdrop-blur-md shadow-lg border border-gridline/20 w-full">
+            <div className="text-heading-sm">Eddie Zhuang</div>
+            <nav className="flex space-x-12">
+              <Link href="#projects" className="text-body-md hover:text-muted-foreground transition-colors">
                 Projects
               </Link>
-              <Link href="#experience" className="text-foreground hover:text-muted-foreground transition-colors">
+              <Link href="#experience" className="text-body-md hover:text-muted-foreground transition-colors">
                 Experience
               </Link>
-              <Link href="#now" className="text-foreground hover:text-muted-foreground transition-colors">
+              <Link href="#now" className="text-body-md hover:text-muted-foreground transition-colors">
                 Now
               </Link>
-              <Link href="#contact" className="text-foreground hover:text-muted-foreground transition-colors">
+              <Link href="#contact" className="text-body-md hover:text-muted-foreground transition-colors">
                 Contact
               </Link>
             </nav>
@@ -47,15 +47,15 @@ export default function Home() {
 
         {/* Hero Section */}
         <ScrollFade>
-          <section className="p-8 pt-16 pb-16 z-10">
-            <h1 className="text-4xl font-normal mb-2">Eddie Zhuang</h1>
-            <p className="text-muted-foreground">Computer science student at McMaster University</p>
+          <section>
+            <h1 className="text-heading-xl mb-2">Eddie Zhuang</h1>
+            <p className="text-heading-md text-muted-foreground">Computer science student at McMaster University</p>
           </section>
         </ScrollFade>
 
         {/* Projects Section */}
         <ScrollFade>
-          <section id="projects" className="p-8 z-10">
+          <section id="projects">
             <h2 className="text-2xl font-normal mb-8">Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 [&>*]:aspect-video">
               <ScrollFade delay={1}>
@@ -92,7 +92,7 @@ export default function Home() {
 
         {/* Experience Section */}
         <ScrollFade>
-          <section id="experience" className="p-8 z-10">
+          <section id="experience">
             <h2 className="text-2xl font-normal mb-8">Experience</h2>
             <div className="space-y-12">
               <ScrollFade delay={1}>
@@ -125,7 +125,7 @@ export default function Home() {
 
         {/* Now Section */}
         <ScrollFade>
-          <section id="now" className="p-8 z-10">
+          <section id="now">
             <h2 className="text-2xl font-normal mb-8">Now</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <ScrollFade delay={1}>
@@ -143,7 +143,7 @@ export default function Home() {
 
         {/* Contact Section */}
         <ScrollFade>
-          <section id="contact" className="p-8 grid grid-cols-1 md:grid-cols-2 gap-8 z-10">
+          <section id="contact" className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h2 className="text-2xl font-normal mb-4">Contact</h2>
               <p className="text-muted-foreground mb-2">Have an opportunity in mind, or just want to chat?</p>
@@ -155,7 +155,7 @@ export default function Home() {
 
         {/* Footer */}
         <ScrollFade>
-          <footer className="grid grid-cols-1 md:grid-cols-3 gap-8 p-8 border-t border-gridline z-10">
+          <footer className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-gridline">
             <div>
               <div className="text-foreground mb-4">Eddie Zhuang</div>
               <SocialLinks />
