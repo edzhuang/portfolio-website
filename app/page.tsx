@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground relative">
       {/* Minimal grid background like Stripe */}
-      <div className="absolute inset-0 max-w-6xl mx-auto left-0 right-0 pointer-events-none">
+      <div className="absolute inset-0 max-w-[1080px] mx-auto left-0 right-0 pointer-events-none">
         {/* 5 vertical lines */}
         <div className="absolute left-0 h-full border-l border-gridline" />
         <div className="absolute left-1/4 h-full border-l border-gridline" />
@@ -23,13 +23,13 @@ export default function Home() {
       </div>
 
       {/* Content Container */}
-      <div className="max-w-6xl mx-auto px-6 flex flex-col gap-40">
+      <div className="max-w-[1080px] mx-auto px-6 flex flex-col gap-40">
         {/* Header/Navigation - Floating with blur effect */}
         <div className="sticky top-6 flex justify-center w-full z-10">
-          <header className="flex items-center justify-between px-6 py-3 rounded-full bg-secondary/70 backdrop-blur-md shadow-lg border border-gridline w-full">
+          <header className="flex items-center justify-between px-6 py-4 rounded-full bg-secondary/70 backdrop-blur-md shadow-lg border border-gridline w-full">
             <div className="text-heading-sm">Eddie Zhuang</div>
             <nav className="flex space-x-12">
-              <Link href="#projects" className="text-body-md hover:text-muted-foreground transition-colors">
+              <Link href="#projects" className="leading-[27px] text-body-md hover:text-muted-foreground transition-colors">
                 Projects
               </Link>
               <Link href="#experience" className="text-body-md hover:text-muted-foreground transition-colors">
@@ -47,7 +47,7 @@ export default function Home() {
 
         {/* Hero Section */}
         <ScrollFade>
-          <section>
+          <section className="flex flex-col gap-6">
             <h1 className="text-heading-xl mb-2">Eddie Zhuang</h1>
             <p className="text-heading-md text-muted-foreground">Computer science student at McMaster University</p>
           </section>
@@ -155,7 +155,7 @@ export default function Home() {
 
         {/* Footer */}
         <ScrollFade>
-          <footer className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-gridline">
+          <footer className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-gridline py-12">
             <div>
               <div className="text-foreground mb-4">Eddie Zhuang</div>
               <SocialLinks />
