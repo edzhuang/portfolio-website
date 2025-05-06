@@ -27,7 +27,10 @@ export default function Home() {
         {/* Header/Navigation - Floating with blur effect */}
         <div className="sticky top-6 flex justify-center w-full z-10">
           <header className="flex items-center justify-between px-6 py-3 rounded-full bg-secondary/70 backdrop-blur-md shadow-lg border border-gridline w-full">
-            <div className="text-body-md">Eddie Zhuang</div>
+            <Link href="" onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }} className="text-body-md">Eddie Zhuang</Link>
             <nav className="flex space-x-12">
               <Link href="#about" className="text-body-sm hover:text-muted-foreground transition-colors">
                 About
@@ -78,9 +81,9 @@ export default function Home() {
 
         {/* Experience Section */}
         <ScrollFade>
-          <section id="experience">
+          <section id="experience" className="flex flex-col gap-12">
             <h2 className="text-heading-lg mb-8">Experience</h2>
-            <div className="space-y-12">
+            <div className="flex flex-col gap-16">
               <ScrollFade delay={1}>
                 <ExperienceItem
                   years="20XX - 20YY"

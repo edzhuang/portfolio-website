@@ -64,11 +64,16 @@
 @layer base {
   * {
     @apply border-border;
+    @apply scroll-smooth;
   }
 
   body {
     @apply bg-background text-foreground;
     @apply leading-tight;
+  }
+
+  [id] {
+    scroll-margin-top: 8rem;
   }
 }
 
