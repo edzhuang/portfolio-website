@@ -10,9 +10,9 @@ import { Header } from "@/components/header";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center min-h-screen bg-background text-foreground relative px-4">
+    <div className="flex flex-col items-center min-h-screen bg-background text-foreground relative">
       {/* Minimal grid background like Stripe */}
-      <div className="absolute inset-x-4 inset-y-0 max-w-[1080px] mx-auto pointer-events-none">
+      <div className="absolute inset-x-4 inset-y-0 max-w-[1080px] mx-auto pointer-events-none z-0">
         {/* 5 vertical lines */}
         <div className="absolute left-0 h-full border-l border-gridline" />
         <div className="absolute left-1/4 h-full border-l border-gridline" />
@@ -22,12 +22,10 @@ export default function Home() {
       </div>
 
       {/* Header/Navigation - Floating with blur effect */}
-      <div className={`fixed w-full top-6 px-10 flex justify-center z-10`}>
-        <Header />
-      </div>
+      <Header />
 
       {/* Content Container */}
-      <div className="flex flex-col gap-40 max-w-[1080px] px-6 pt-48 pb-40">
+      <div className="flex flex-col gap-40 max-w-[1080px] px-6 pt-48 pb-40 mx-4">
         {/* Hero Section */}
         <section className="flex flex-col gap-6">
           <ScrollFade delay={1}>
@@ -152,9 +150,7 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <div className="w-full max-w-[1080px]">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }

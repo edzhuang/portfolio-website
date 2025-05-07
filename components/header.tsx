@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
 export function Header() {
@@ -23,17 +23,16 @@ export function Header() {
   };
 
   return (
-    <div className={`flex justify-center w-full`}>
-      <header
-        className={`flex flex-col max-w-[1032px] w-full px-6 py-3 bg-secondary/70 backdrop-blur-md shadow-lg border border-gridline transition-all duration-300 ${
-          mobileMenuOpen ? "rounded-lg" : "rounded-3xl"
-        }`}
-      >
+    <header
+      className={`fixed z-10 left-0 right-0 top-6 flex justify-center w-full mx-auto px-6 py-3 bg-secondary/70 backdrop-blur-md shadow-lg border border-gridline max-w-[min(calc(100%-2rem),1080px)] ${
+        mobileMenuOpen
+          ? "h-[calc(100dvh-3rem)] rounded-lg"
+          : "h-[51px] rounded-[26px]"
+      } transition-[border-radius,height] duration-300 ease-in-out`}
+    >
+      <div className="flex flex-col w-full">
         <div className="flex flex-row items-center justify-between">
-          <Link
-            href=""
-            className="text-body-md hover:text-muted-foreground transition-colors"
-          >
+          <Link href="" className="text-body-md hover:text-muted-foreground">
             Eddie Zhuang
           </Link>
 
@@ -41,25 +40,25 @@ export function Header() {
           <nav className="hidden md:flex space-x-12">
             <Link
               href="#about"
-              className="text-body-sm hover:text-muted-foreground transition-colors"
+              className="text-body-sm hover:text-muted-foreground"
             >
               About
             </Link>
             <Link
               href="#experience"
-              className="text-body-sm hover:text-muted-foreground transition-colors"
+              className="text-body-sm hover:text-muted-foreground"
             >
               Experience
             </Link>
             <Link
               href="#projects"
-              className="text-body-sm hover:text-muted-foreground transition-colors"
+              className="text-body-sm hover:text-muted-foreground"
             >
               Projects
             </Link>
             <Link
               href="#contact"
-              className="text-body-sm hover:text-muted-foreground transition-colors"
+              className="text-body-sm hover:text-muted-foreground"
             >
               Contact
             </Link>
@@ -89,46 +88,42 @@ export function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu Dropdown */}
-        <div
-          className={`md:hidden w-full transition-all duration-300 overflow-hidden ${
-            mobileMenuOpen
-              ? "max-h-60 opacity-100 mt-4"
-              : "max-h-0 opacity-0 pointer-events-none mt-0"
-          }`}
-        >
-          <nav className="flex flex-col space-y-5">
-            <Link
-              href="#about"
-              className="text-body-sm hover:text-muted-foreground transition-colors py-1"
-              onClick={handleNavClick}
-            >
-              About
-            </Link>
-            <Link
-              href="#experience"
-              className="text-body-sm hover:text-muted-foreground transition-colors py-1"
-              onClick={handleNavClick}
-            >
-              Experience
-            </Link>
-            <Link
-              href="#projects"
-              className="text-body-sm hover:text-muted-foreground transition-colors py-1"
-              onClick={handleNavClick}
-            >
-              Projects
-            </Link>
-            <Link
-              href="#contact"
-              className="text-body-sm hover:text-muted-foreground transition-colors py-1"
-              onClick={handleNavClick}
-            >
-              Contact
-            </Link>
-          </nav>
-        </div>
-      </header>
-    </div>
+        {/* Mobile Menu Container with CSS transition */}
+        {mobileMenuOpen && (
+          <div className="md:hidden overflow-hidden ease-in-out">
+            <nav className="flex flex-col gap-6 mt-6">
+              <Link
+                href="#about"
+                className="text-heading-md hover:text-muted-foreground"
+                onClick={handleNavClick}
+              >
+                About
+              </Link>
+              <Link
+                href="#experience"
+                className="text-heading-md hover:text-muted-foreground"
+                onClick={handleNavClick}
+              >
+                Experience
+              </Link>
+              <Link
+                href="#projects"
+                className="text-heading-md hover:text-muted-foreground"
+                onClick={handleNavClick}
+              >
+                Projects
+              </Link>
+              <Link
+                href="#contact"
+                className="text-heading-md hover:text-muted-foreground"
+                onClick={handleNavClick}
+              >
+                Contact
+              </Link>
+            </nav>
+          </div>
+        )}
+      </div>
+    </header>
   );
 }
