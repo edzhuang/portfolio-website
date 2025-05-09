@@ -6,7 +6,7 @@ export function SocialLinks() {
   return (
     <div className="flex flex-row gap-4">
       <Link
-        href="https://github.com"
+        href="https://github.com/edzhuang"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub"
@@ -14,7 +14,7 @@ export function SocialLinks() {
         <FaGithub className="w-7 h-7 text-foreground hover:text-muted-foreground transition-colors" />
       </Link>
       <Link
-        href="https://linkedin.com"
+        href="https://www.linkedin.com/in/eddie-zhuang/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="LinkedIn"
@@ -22,7 +22,7 @@ export function SocialLinks() {
         <FaLinkedin className="w-7 h-7 text-foreground hover:text-muted-foreground transition-colors" />
       </Link>
       <Link
-        href="https://x.com"
+        href="https://x.com/senkei1589"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="X"
