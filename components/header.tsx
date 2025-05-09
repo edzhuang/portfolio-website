@@ -47,60 +47,58 @@ export function Header() {
   };
 
   return (
-    <div className="fixed z-10 left-0 right-0 top-4 md:top-6 transition-[top] duration-300 flex justify-center w-full px-4">
-      <header
-        className={`container py-3 bg-secondary/70 backdrop-blur-md shadow-lg border border-gridline ${
-          mobileMenuOpen
-            ? "h-[calc(100dvh-2rem)] rounded-lg"
-            : "h-[51px] rounded-[26px]"
-        } transition-[border-radius,height] duration-300 ease-in-out`}
-      >
-        <div className="flex flex-col w-full">
-          <div className="flex flex-row items-center justify-between">
-            <Link href="" className="text-body-md hover:text-muted-foreground">
-              Eddie Zhuang
-            </Link>
+    <header
+      className={`container py-3 bg-secondary/70 backdrop-blur-md shadow-lg border border-gridline ${
+        mobileMenuOpen
+          ? "h-[calc(100dvh-2rem)] rounded-lg"
+          : "h-[51px] rounded-[26px]"
+      } transition-[border-radius,height] duration-300 ease-in-out`}
+    >
+      <div className="flex flex-col w-full">
+        <div className="flex flex-row items-center justify-between">
+          <Link href="" className="text-body-md hover:text-muted-foreground">
+            Eddie Zhuang
+          </Link>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-12">
-              {renderNavLinks(false)}
-            </nav>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-12">
+            {renderNavLinks(false)}
+          </nav>
 
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden flex flex-col space-y-1.5"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
-              aria-expanded={mobileMenuOpen}
-            >
-              <span
-                className={`block w-6 h-0.5 bg-foreground transition-all duration-300 ${
-                  mobileMenuOpen ? "rotate-45 translate-y-2" : ""
-                }`}
-              ></span>
-              <span
-                className={`block w-6 h-0.5 bg-foreground transition-all duration-200 ${
-                  mobileMenuOpen ? "opacity-0" : ""
-                }`}
-              ></span>
-              <span
-                className={`block w-6 h-0.5 bg-foreground transition-all duration-300 ${
-                  mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
-                }`}
-              ></span>
-            </button>
-          </div>
-
-          {/* Mobile Menu Container with CSS transition */}
-          {mobileMenuOpen && (
-            <div className="md:hidden overflow-hidden ease-in-out">
-              <nav className="flex flex-col gap-6 mt-6">
-                {renderNavLinks(true)}
-              </nav>
-            </div>
-          )}
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden flex flex-col space-y-1.5"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={mobileMenuOpen}
+          >
+            <span
+              className={`block w-6 h-0.5 bg-foreground transition-all duration-300 ${
+                mobileMenuOpen ? "rotate-45 translate-y-2" : ""
+              }`}
+            ></span>
+            <span
+              className={`block w-6 h-0.5 bg-foreground transition-all duration-200 ${
+                mobileMenuOpen ? "opacity-0" : ""
+              }`}
+            ></span>
+            <span
+              className={`block w-6 h-0.5 bg-foreground transition-all duration-300 ${
+                mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
+              }`}
+            ></span>
+          </button>
         </div>
-      </header>
-    </div>
+
+        {/* Mobile Menu Container with CSS transition */}
+        {mobileMenuOpen && (
+          <div className="md:hidden overflow-hidden ease-in-out">
+            <nav className="flex flex-col gap-6 mt-6">
+              {renderNavLinks(true)}
+            </nav>
+          </div>
+        )}
+      </div>
+    </header>
   );
 }

@@ -3,7 +3,7 @@ import { SocialLinks } from "@/components/social-links";
 
 export function Footer() {
   return (
-    <footer className="container grid grid-cols-2 w-full md:grid-cols-4 px-6 pt-12 pb-24 gap-12 border-t border-gridline relative z-10">
+    <footer className="container grid grid-cols-2 md:grid-cols-4 px-6 pt-12 pb-24 gap-12 border-t border-gridline relative z-10">
       <div className="flex flex-col gap-6 col-span-2">
         <Link
           href=""
