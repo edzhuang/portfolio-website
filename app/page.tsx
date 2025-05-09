@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center min-h-screen bg-background text-foreground relative">
       {/* Minimal grid background like Stripe */}
-      <div className="absolute inset-x-4 inset-y-0 max-w-[1080px] mx-auto pointer-events-none z-0">
+      <div className="container mx-auto absolute inset-x-0 inset-y-0 pointer-events-none z-0">
         {/* 5 vertical lines */}
         <div className="absolute left-0 h-full border-l border-gridline" />
         <div className="absolute left-1/4 h-full border-l border-gridline" />
@@ -25,112 +25,88 @@ export default function Home() {
       <Header />
 
       {/* Content Container */}
-      <div className="flex flex-col gap-40 max-w-[1080px] px-6 pt-48 pb-40 mx-4">
+      <div className="container mx-auto flex flex-col gap-40 px-6 pt-48 pb-40">
         {/* Hero Section */}
-        <section className="flex flex-col gap-6">
-          <ScrollFade delay={1}>
+        <ScrollFade delay={1}>
+          <section className="flex flex-col gap-6">
             <h1 className="text-heading-xl mb-2">Eddie Zhuang</h1>
-          </ScrollFade>
-          <ScrollFade delay={2}>
             <p className="text-heading-md text-muted-foreground">
               Computer science student at McMaster University
             </p>
-          </ScrollFade>
-        </section>
+          </section>
+        </ScrollFade>
 
         {/* About Section */}
-        <ScrollFade>
+        <ScrollFade delay={2}>
           <section id="about" className="flex flex-col gap-12">
             <h2 className="text-heading-lg">About</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-              <ScrollFade delay={1}>
-                <AboutItem text="Short point whose bullet picks out a section of the grid lines" />
-              </ScrollFade>
-              <ScrollFade delay={2}>
-                <AboutItem text="Short point whose bullet picks out a section of the grid lines" />
-              </ScrollFade>
-              <ScrollFade delay={3}>
-                <AboutItem text="Short point whose bullet picks out a section of the grid lines" />
-              </ScrollFade>
-              <ScrollFade delay={4}>
-                <AboutItem text="Short point whose bullet picks out a section of the grid lines" />
-              </ScrollFade>
+              <AboutItem text="Short point whose bullet picks out a section of the grid lines" />
+              <AboutItem text="Short point whose bullet picks out a section of the grid lines" />
+              <AboutItem text="Short point whose bullet picks out a section of the grid lines" />
+              <AboutItem text="Short point whose bullet picks out a section of the grid lines" />
             </div>
           </section>
         </ScrollFade>
 
         {/* Experience Section */}
-        <ScrollFade>
+        <ScrollFade delay={3}>
           <section id="experience" className="flex flex-col gap-12">
             <h2 className="text-heading-lg">Experience</h2>
             <div className="flex flex-col gap-16">
-              <ScrollFade delay={1}>
-                <ExperienceItem
-                  years="20XX - 20YY"
-                  organization="Organization"
-                  title="Job Title"
-                  description="Description of the job and what I worked on. Make it a sentence or two."
-                />
-              </ScrollFade>
-              <ScrollFade delay={2}>
-                <ExperienceItem
-                  years="20XX - 20YY"
-                  organization="Organization"
-                  title="Job Title"
-                  description="Description of the job and what I worked on. Make it a sentence or two."
-                />
-              </ScrollFade>
-              <ScrollFade delay={3}>
-                <ExperienceItem
-                  years="20XX - 20YY"
-                  organization="Organization"
-                  title="Job Title"
-                  description="Description of the job and what I worked on. Make it a sentence or two."
-                />
-              </ScrollFade>
+              <ExperienceItem
+                years="20XX - 20YY"
+                organization="Organization"
+                title="Job Title"
+                description="Description of the job and what I worked on. Make it a sentence or two."
+              />
+              <ExperienceItem
+                years="20XX - 20YY"
+                organization="Organization"
+                title="Job Title"
+                description="Description of the job and what I worked on. Make it a sentence or two."
+              />
+              <ExperienceItem
+                years="20XX - 20YY"
+                organization="Organization"
+                title="Job Title"
+                description="Description of the job and what I worked on. Make it a sentence or two."
+              />
             </div>
           </section>
         </ScrollFade>
 
         {/* Projects Section */}
-        <ScrollFade>
+        <ScrollFade delay={4}>
           <section id="projects">
             <h2 className="text-heading-lg mb-8">Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 [&>*]:aspect-video">
-              <ScrollFade delay={1}>
-                <ProjectCard
-                  title="Project Name"
-                  description="This is the project description. It gives a short description of the project."
-                  imageUrl="/placeholder.svg?height=225&width=400"
-                />
-              </ScrollFade>
-              <ScrollFade delay={2}>
-                <ProjectCard
-                  title="Project Name"
-                  description="This is the project description. It gives a short description of the project."
-                  imageUrl="/placeholder.svg?height=225&width=400"
-                />
-              </ScrollFade>
-              <ScrollFade delay={3}>
-                <ProjectCard
-                  title="Project Name"
-                  description="This is the project description. It gives a short description of the project."
-                  imageUrl="/placeholder.svg?height=225&width=400"
-                />
-              </ScrollFade>
-              <ScrollFade delay={4}>
-                <ProjectCard
-                  title="Project Name"
-                  description="This is the project description. It gives a short description of the project."
-                  imageUrl="/placeholder.svg?height=225&width=400"
-                />
-              </ScrollFade>
+              <ProjectCard
+                title="Project Name"
+                description="This is the project description. It gives a short description of the project."
+                imageUrl="/placeholder.svg?height=225&width=400"
+              />
+              <ProjectCard
+                title="Project Name"
+                description="This is the project description. It gives a short description of the project."
+                imageUrl="/placeholder.svg?height=225&width=400"
+              />
+              <ProjectCard
+                title="Project Name"
+                description="This is the project description. It gives a short description of the project."
+                imageUrl="/placeholder.svg?height=225&width=400"
+              />
+              <ProjectCard
+                title="Project Name"
+                description="This is the project description. It gives a short description of the project."
+                imageUrl="/placeholder.svg?height=225&width=400"
+              />
             </div>
           </section>
         </ScrollFade>
 
         {/* Contact Section */}
-        <ScrollFade>
+        <ScrollFade delay={5}>
           <section
             id="contact"
             className="grid grid-cols-1 md:grid-cols-2 gap-12"
