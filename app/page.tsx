@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center min-h-screen bg-background text-foreground relative">
       {/* Minimal grid background like Stripe */}
-      <div className="absolute inset-0 pointer-events-none px-4 z-0">
+      <div className="absolute inset-0 pointer-events-none px-4">
         <div className="container relative w-full h-full">
           {/* 5 vertical lines */}
           <div className="absolute left-0 h-full border-l border-gridline" />
