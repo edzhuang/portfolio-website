@@ -30,13 +30,13 @@ export default function Home() {
 
       {/* Content Container */}
       <div className="w-full px-4">
-        <div className="container flex flex-col gap-36 pt-48 pb-40">
+        <div className="container flex flex-col gap-36 pt-48 pb-36">
           {/* Hero Section */}
           <ScrollFade delay={1}>
             <section className="flex flex-col gap-3">
-              <h1 className="text-heading-xl mb-2">Eddie Zhuang</h1>
+              <h1 className="text-heading-xl">Eddie Zhuang</h1>
               <p className="text-heading-md text-muted-foreground">
-                Computer science at McMaster
+                Commputer science student
               </p>
             </section>
           </ScrollFade>
@@ -46,10 +46,10 @@ export default function Home() {
             <section id="about" className="flex flex-col gap-8">
               <h2 className="text-heading-lg">About</h2>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-                <AboutItem text="I'm a computer science student at McMaster University with a passion for building clean, thoughtful software" />
-                <AboutItem text="My current interests lie in full-stack development and machine learning" />
-                <AboutItem text="Right now, I’m focused on improving my development skills through hands-on projects and preparing for software engineering internships" />
-                <AboutItem text="Long-term, I’m aiming to work at a company where I can grow as an engineer, contribute to impactful products, and eventually dive deeper into ML infrastructure and AI tooling" />
+                <AboutItem text="I'm a computer science student at McMaster University" />
+                <AboutItem text="I have experience with full-stack development and machine learning" />
+                <AboutItem text="Right now, I’m working on full-stack projects and searching for software engineering internships" />
+                <AboutItem text="In the past, I've worked with genetic algorithms as a research assistant and developed a mobile app for my high school" />
               </div>
             </section>
           </ScrollFade>
@@ -60,22 +60,18 @@ export default function Home() {
               <h2 className="text-heading-lg">Experience</h2>
               <div className="flex flex-col gap-16">
                 <ExperienceItem
-                  years="20XX - 20YY"
-                  organization="Organization"
-                  title="Job Title"
-                  description="Description of the job and what I worked on. Make it a sentence or two."
+                  years="2024"
+                  organization="McMaster University"
+                  title="Research Assistant"
+                  description="Implemented genetic algorithm techniques for reinforcement learning tasks"
+                  imageUrl="/images/mcmaster.png"
                 />
                 <ExperienceItem
-                  years="20XX - 20YY"
-                  organization="Organization"
-                  title="Job Title"
-                  description="Description of the job and what I worked on. Make it a sentence or two."
-                />
-                <ExperienceItem
-                  years="20XX - 20YY"
-                  organization="Organization"
-                  title="Job Title"
-                  description="Description of the job and what I worked on. Make it a sentence or two."
+                  years="2022 - 2023"
+                  organization="YRHacks"
+                  title="Technology Executive"
+                  description="Developed a Discord bot and assisted with the website for the York Region's student hackathon"
+                  imageUrl="/images/yrhacks.png"
                 />
               </div>
             </section>
@@ -92,9 +88,9 @@ export default function Home() {
                   imageUrl="/placeholder.svg?height=225&width=400"
                 />
                 <ProjectCard
-                  title="Project Name"
+                  title="Pethsapp"
                   description="This is the project description. It gives a short description of the project."
-                  imageUrl="/placeholder.svg?height=225&width=400"
+                  imageUrl="/images/pethsapp.png"
                 />
                 <ProjectCard
                   title="Project Name"

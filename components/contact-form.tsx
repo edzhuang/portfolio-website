@@ -3,9 +3,9 @@
 import type React from "react";
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/button";
+import { Input } from "@/components/input";
+import { Textarea } from "@/components/textarea";
 
 export function ContactForm() {
   const [formData, setFormData] = useState({

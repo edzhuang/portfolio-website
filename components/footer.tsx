@@ -60,6 +60,14 @@ export function Footer() {
               href="#"
               className="text-body-sm text-muted-foreground hover:text-foreground transition-colors"
             >
+              ResNet
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="#"
+              className="text-body-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
               Pethsapp
             </Link>
           </li>
@@ -77,14 +85,6 @@ export function Footer() {
               className="text-body-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Air Hockey AI
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#"
-              className="text-body-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              AI Ball Balancer
             </Link>
           </li>
         </ul>
