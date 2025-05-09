@@ -31,7 +31,7 @@ export default function Home() {
 
       {/* Content Container */}
       <div className="w-full px-4">
-        <div className="container flex flex-col gap-24 md:gap-36 pt-40 md:pt-48 pb-24 md:pb-36">
+        <div className="container flex flex-col gap-20 md:gap-24 pt-36 md:pt-40 pb-20 md:pb-24">
           {/* Hero Section */}
           <ScrollFade delay={1}>
             <section className="flex flex-col gap-3 text-center md:text-left">
