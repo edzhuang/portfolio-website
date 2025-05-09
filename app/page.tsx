@@ -36,7 +36,7 @@ export default function Home() {
             <section className="flex flex-col gap-3">
               <h1 className="text-heading-xl">Eddie Zhuang</h1>
               <p className="text-heading-md text-muted-foreground">
-                Commputer science student
+                Computer science student
               </p>
             </section>
           </ScrollFade>
@@ -49,7 +49,7 @@ export default function Home() {
                 <AboutItem text="I'm a computer science student at McMaster University" />
                 <AboutItem text="I have experience with full-stack development and machine learning" />
                 <AboutItem text="Right now, I’m working on full-stack projects and searching for software engineering internships" />
-                <AboutItem text="In the past, I've worked with genetic algorithms as a research assistant and developed a mobile app for my high school" />
+                <AboutItem text="In the past, I've worked with genetic algorithms as a research assistant and organized a hackathon" />
               </div>
             </section>
           </ScrollFade>
@@ -83,24 +83,30 @@ export default function Home() {
               <h2 className="text-heading-lg">Projects</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 [&>*]:aspect-video">
                 <ProjectCard
-                  title="Project Name"
-                  description="This is the project description. It gives a short description of the project."
-                  imageUrl="/placeholder.svg?height=225&width=400"
+                  title="ResNet"
+                  description={
+                    'My implementation of the paper "Deep Residual Learning for Image Recognition" from scratch in PyTorch'
+                  }
+                  imageUrl="/images/resnet.png"
+                  url={"https://github.com/edzhuang/resnet"}
                 />
                 <ProjectCard
                   title="Pethsapp"
-                  description="This is the project description. It gives a short description of the project."
+                  description="React Native app made for my high school to deliver announcement notifications, event updates, and general school information"
                   imageUrl="/images/pethsapp.png"
+                  url={"https://www.tsac.ca/pethsapp"}
                 />
                 <ProjectCard
-                  title="Project Name"
-                  description="This is the project description. It gives a short description of the project."
-                  imageUrl="/placeholder.svg?height=225&width=400"
+                  title="YRHacks Discord Bot"
+                  description="Python Discord bot for YRHacks to automate participant verification and match attendees with mentors during the event"
+                  imageUrl="/images/discord.png"
+                  url={"https://github.com/yrhacks/yrhacks-discord-bot-2023"}
                 />
                 <ProjectCard
-                  title="Project Name"
-                  description="This is the project description. It gives a short description of the project."
-                  imageUrl="/placeholder.svg?height=225&width=400"
+                  title="Air Hockey AI"
+                  description="A reinforcement learning agent trained to play air hockey, made using the Unity ML-Agents toolkit"
+                  imageUrl="/images/air-hockey-ai.png"
+                  url={"https://edzhuang.itch.io/air-hockey-ai"}
                 />
               </div>
             </section>
