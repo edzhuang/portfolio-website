@@ -47,9 +47,9 @@ export function Header() {
   };
 
   return (
-    <div className="fixed container z-10 left-0 right-0 top-4 md:top-6 transition-[top] duration-300 flex justify-center w-full px-4">
+    <div className="fixed z-10 left-0 right-0 top-4 md:top-6 transition-[top] duration-300 flex justify-center w-full px-4">
       <header
-        className={`w-full px-6 py-3 bg-secondary/70 backdrop-blur-md shadow-lg border border-gridline ${
+        className={`container py-3 bg-secondary/70 backdrop-blur-md shadow-lg border border-gridline ${
           mobileMenuOpen
             ? "h-[calc(100dvh-2rem)] rounded-lg"
             : "h-[51px] rounded-[26px]"

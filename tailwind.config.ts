@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
@@ -13,23 +13,23 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1.5rem",
       screens: {
-        "xl": "1080px",
+        xl: "1080px",
       },
     },
     extend: {
       fontSize: {
-        'heading-xl': ['4rem', { fontWeight: '700' }],
-        'heading-lg': ['3rem', { fontWeight: '700' }],
-        'heading-md': ['2rem', { fontWeight: '700' }],
-        'heading-sm': ['1.5rem', { fontWeight: '700' }],
-        'body-md': ['1.25rem', { fontWeight: '500' }],
-        'body-sm': ['1rem', { fontWeight: '500' }],
-        'footer-heading': ['1rem', { fontWeight: '700' }],
+        "heading-xl": ["4rem", { fontWeight: "700" }],
+        "heading-lg": ["3rem", { fontWeight: "700" }],
+        "heading-md": ["2rem", { fontWeight: "700" }],
+        "heading-sm": ["1.5rem", { fontWeight: "700" }],
+        "body-md": ["1.25rem", { fontWeight: "500" }],
+        "body-sm": ["1rem", { fontWeight: "500" }],
+        "footer-heading": ["1rem", { fontWeight: "700" }],
       },
       fontFamily: {
-        sans: ['var(--font-satoshi)'],
+        sans: ["var(--font-satoshi)"],
       },
       inset: {
         "1/6": "16.666667%",
@@ -114,6 +114,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
