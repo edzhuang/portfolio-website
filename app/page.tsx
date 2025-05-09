@@ -10,22 +10,24 @@ import { Header } from "@/components/header";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center min-h-screen bg-background text-foreground relative">
+    <div className="flex flex-col items-center min-h-screen bg-background text-foreground relative px-4">
       {/* Minimal grid background like Stripe */}
-      <div className="container mx-auto absolute inset-x-0 inset-y-0 pointer-events-none z-0">
-        {/* 5 vertical lines */}
-        <div className="absolute left-0 h-full border-l border-gridline" />
-        <div className="absolute left-1/4 h-full border-l border-gridline border-dashed hidden md:block" />
-        <div className="absolute left-2/4 h-full border-l border-gridline border-dashed" />
-        <div className="absolute left-3/4 h-full border-l border-gridline border-dashed hidden md:block" />
-        <div className="absolute right-0 h-full border-l border-gridline" />
+      <div className="container mx-auto absolute inset-0 pointer-events-none px-4 z-0">
+        <div className="relative w-full h-full">
+          {/* 5 vertical lines */}
+          <div className="absolute left-0 h-full border-l border-gridline" />
+          <div className="absolute left-1/4 h-full border-l border-gridline border-dashed hidden md:block" />
+          <div className="absolute left-2/4 h-full border-l border-gridline border-dashed" />
+          <div className="absolute left-3/4 h-full border-l border-gridline border-dashed hidden md:block" />
+          <div className="absolute right-0 h-full border-l border-gridline" />
+        </div>
       </div>
 
       {/* Header/Navigation - Floating with blur effect */}
       <Header />
 
       {/* Content Container */}
-      <div className="container mx-auto flex flex-col gap-40 px-6 pt-48 pb-40">
+      <div className="container mx-auto flex flex-col gap-40 pt-48 pb-40">
         {/* Hero Section */}
         <ScrollFade delay={1}>
           <section className="flex flex-col gap-6">

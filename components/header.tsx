@@ -47,11 +47,11 @@ export function Header() {
   };
 
   return (
-    <div className="fixed z-10 left-0 right-0 top-6 flex justify-center w-full px-6">
+    <div className="fixed container z-10 left-0 right-0 top-4 md:top-6 transition-[top] duration-300 flex justify-center w-full px-4">
       <header
-        className={`container mx-auto py-3 bg-secondary/70 backdrop-blur-md shadow-lg border border-gridline ${
+        className={`w-full px-6 py-3 bg-secondary/70 backdrop-blur-md shadow-lg border border-gridline ${
           mobileMenuOpen
-            ? "h-[calc(100dvh-3rem)] rounded-lg"
+            ? "h-[calc(100dvh-2rem)] rounded-lg"
             : "h-[51px] rounded-[26px]"
         } transition-[border-radius,height] duration-300 ease-in-out`}
       >
