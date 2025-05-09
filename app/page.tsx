@@ -30,33 +30,33 @@ export default function Home() {
 
       {/* Content Container */}
       <div className="w-full px-4">
-        <div className="container flex flex-col gap-40 pt-48 pb-40">
+        <div className="container flex flex-col gap-36 pt-48 pb-40">
           {/* Hero Section */}
           <ScrollFade delay={1}>
-            <section className="flex flex-col gap-6">
+            <section className="flex flex-col gap-3">
               <h1 className="text-heading-xl mb-2">Eddie Zhuang</h1>
               <p className="text-heading-md text-muted-foreground">
-                Computer science student at McMaster University
+                Computer science at McMaster
               </p>
             </section>
           </ScrollFade>
 
           {/* About Section */}
           <ScrollFade delay={2}>
-            <section id="about" className="flex flex-col gap-12">
+            <section id="about" className="flex flex-col gap-8">
               <h2 className="text-heading-lg">About</h2>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-                <AboutItem text="Short point whose bullet picks out a section of the grid lines" />
-                <AboutItem text="Short point whose bullet picks out a section of the grid lines" />
-                <AboutItem text="Short point whose bullet picks out a section of the grid lines" />
-                <AboutItem text="Short point whose bullet picks out a section of the grid lines" />
+                <AboutItem text="I'm a computer science student at McMaster University with a passion for building clean, thoughtful software" />
+                <AboutItem text="My current interests lie in full-stack development and machine learning" />
+                <AboutItem text="Right now, I’m focused on improving my development skills through hands-on projects and preparing for software engineering internships" />
+                <AboutItem text="Long-term, I’m aiming to work at a company where I can grow as an engineer, contribute to impactful products, and eventually dive deeper into ML infrastructure and AI tooling" />
               </div>
             </section>
           </ScrollFade>
 
           {/* Experience Section */}
           <ScrollFade delay={3}>
-            <section id="experience" className="flex flex-col gap-12">
+            <section id="experience" className="flex flex-col gap-8">
               <h2 className="text-heading-lg">Experience</h2>
               <div className="flex flex-col gap-16">
                 <ExperienceItem
@@ -83,8 +83,8 @@ export default function Home() {
 
           {/* Projects Section */}
           <ScrollFade delay={4}>
-            <section id="projects">
-              <h2 className="text-heading-lg mb-8">Projects</h2>
+            <section id="projects" className="flex flex-col gap-8">
+              <h2 className="text-heading-lg">Projects</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 [&>*]:aspect-video">
                 <ProjectCard
                   title="Project Name"
@@ -116,12 +116,10 @@ export default function Home() {
               id="contact"
               className="grid grid-cols-1 md:grid-cols-2 gap-12"
             >
-              <div>
-                <h2 className="text-heading-lg mb-6">Contact</h2>
+              <div className="flex flex-col gap-4">
+                <h2 className="text-heading-lg">Contact</h2>
                 <p className="text-body-md text-muted-foreground mb-2">
-                  Have an opportunity in mind, or just want to chat?
-                </p>
-                <p className="text-body-md text-muted-foreground">
+                  Have an opportunity in mind, or just want to chat? <br />
                   Feel free to send me a message.
                 </p>
               </div>
