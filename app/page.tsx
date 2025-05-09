@@ -31,12 +31,14 @@ export default function Home() {
 
       {/* Content Container */}
       <div className="w-full px-4">
-        <div className="container flex flex-col gap-36 pt-48 pb-36">
+        <div className="container flex flex-col gap-24 md:gap-36 pt-40 md:pt-48 pb-24 md:pb-36">
           {/* Hero Section */}
           <ScrollFade delay={1}>
             <section className="flex flex-col gap-3">
-              <h1 className="text-heading-xl">Eddie Zhuang</h1>
-              <p className="text-heading-md text-muted-foreground">
+              <h1 className="text-heading-lg md:text-heading-xl">
+                Eddie Zhuang
+              </h1>
+              <p className="text-heading-sm md:text-heading-md text-muted-foreground">
                 Computer science student
               </p>
             </section>
@@ -44,8 +46,8 @@ export default function Home() {
           {/* About Section */}
           <ScrollFade delay={2}>
             <section id="about" className="flex flex-col gap-8">
-              <h2 className="text-heading-lg">About</h2>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+              <h2 className="text-heading-md md:text-heading-lg">About</h2>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
                 <AboutItem text="I'm a computer science student at McMaster University" />
                 <AboutItem text="I have experience with full-stack development and machine learning" />
                 <AboutItem text="Right now, I’m working on full-stack projects and searching for software engineering internships" />
@@ -56,7 +58,7 @@ export default function Home() {
           {/* Experience Section */}
           <ScrollFade delay={3}>
             <section id="experience" className="flex flex-col gap-8">
-              <h2 className="text-heading-lg">Experience</h2>
+              <h2 className="text-heading-md md:text-heading-lg">Experience</h2>
               <div className="flex flex-col gap-16">
                 <ExperienceItem
                   years="2024"
@@ -78,7 +80,7 @@ export default function Home() {
           {/* Projects Section */}
           <ScrollFade delay={4}>
             <section id="projects" className="flex flex-col gap-8">
-              <h2 className="text-heading-lg">Projects</h2>
+              <h2 className="text-heading-md md:text-heading-lg">Projects</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 [&>*]:aspect-video">
                 {projectLinks.map((project) => (
                   <ProjectCard
@@ -96,11 +98,11 @@ export default function Home() {
           <ScrollFade delay={5}>
             <section
               id="contact"
-              className="grid grid-cols-1 md:grid-cols-2 gap-12"
+              className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"
             >
               <div className="flex flex-col gap-4">
-                <h2 className="text-heading-lg">Contact</h2>
-                <p className="text-body-md text-muted-foreground mb-2">
+                <h2 className="text-heading-md md:text-heading-lg">Contact</h2>
+                <p className="text-body-sm md:text-body-md text-muted-foreground mb-2">
                   Have an opportunity in mind, or just want to chat? <br />
                   Feel free to send me a message.
                 </p>

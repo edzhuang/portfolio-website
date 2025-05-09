@@ -42,16 +42,20 @@ export function ProjectCard({
       {url ? (
         <div className="inline-block">
           <Link href={url} className="group inline-block relative">
-            <h3 className="text-heading-sm text-foreground inline-block">
+            <h3 className="text-body-md md:text-heading-sm text-foreground inline-block">
               {title}
             </h3>
             <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-foreground transition-all duration-300 group-hover:w-full"></span>
           </Link>
         </div>
       ) : (
-        <h3 className="text-heading-sm text-foreground">{title}</h3>
+        <h3 className="text-body-md md:text-heading-sm text-foreground">
+          {title}
+        </h3>
       )}
-      <p className="text-body-md text-muted-foreground">{description}</p>
+      <p className="text-body-sm md:text-body-md text-muted-foreground">
+        {description}
+      </p>
     </div>
   );
 }

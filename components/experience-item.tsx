@@ -29,11 +29,15 @@ export function ExperienceItem({
       {/* Description column */}
       <div className="relative col-span-1 md:col-span-2 flex flex-col gap-2 order-2 md:order-1">
         <div className="absolute -left-6 top-3 border-l h-6 border-foreground"></div>
-        <h3 className="flex items-center text-heading-md text-foreground h-12">
+        <h3 className="flex items-center text-heading-sm md:text-heading-md text-foreground h-12">
           {organization}
         </h3>
-        <h4 className="text-heading-sm text-foreground">{title}</h4>
-        <p className="text-body-md text-muted-foreground">{description}</p>
+        <h4 className="text-body-md md:text-heading-sm text-foreground">
+          {title}
+        </h4>
+        <p className="text-body-sm md:text-body-md text-muted-foreground">
+          {description}
+        </p>
       </div>
 
       {/* Image column */}
