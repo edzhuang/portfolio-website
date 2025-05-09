@@ -14,11 +14,13 @@ export function ExperienceItem({
   className = "",
 }: ExperienceItemProps) {
   return (
-    <div className={`grid grid-cols-4 gap-12 ${className}`}>
-      <div className="flex items-center col-span-1 text-body-md text-muted-foreground h-12">
+    <div
+      className={`relative grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-12 ${className}`}
+    >
+      <div className="hidden md:flex items-center md:col-span-1 text-body-md text-muted-foreground h-12">
         {years}
       </div>
-      <div className="relative col-span-2 flex flex-col gap-2">
+      <div className="relative col-span-1 md:col-span-2 flex flex-col gap-2 order-2 md:order-1">
         <div className="absolute -left-6 top-3 border-l h-6 border-foreground"></div>
         <h3 className="flex items-center text-heading-md text-foreground h-12">
           {organization}
@@ -26,7 +28,7 @@ export function ExperienceItem({
         <h4 className="text-heading-sm text-foreground">{title}</h4>
         <p className="text-body-md text-muted-foreground">{description}</p>
       </div>
-      <div className="col-span-1 flex justify-end">
+      <div className="col-span-1 flex justify-start md:justify-end order-1 md:order-2">
         <div className="w-12 h-12 border border-gridline"></div>
       </div>
     </div>
