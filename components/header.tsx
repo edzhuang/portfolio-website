@@ -1,12 +1,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
-
-const navItems = [
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
-];
+import { mainNavItems } from "@/lib/navigation";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -28,9 +22,8 @@ export function Header() {
   const handleNavClick = () => {
     setMobileMenuOpen(false);
   };
-
   const renderNavLinks = (isMobile: boolean) => {
-    return navItems.map((item) => (
+    return mainNavItems.map((item) => (
       <Link
         key={item.href}
         href={item.href}

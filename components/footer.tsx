@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SocialLinks } from "@/components/social-links";
+import { mainNavItems, projectLinks } from "@/lib/navigation";
 
 export function Footer() {
   return (
@@ -17,76 +18,32 @@ export function Footer() {
       <div className="flex flex-col gap-6 col-span-1">
         <div className="text-footer-heading">Landing</div>
         <ul className="flex flex-col gap-3">
-          <li>
-            <Link
-              href="#about"
-              className="text-body-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#experience"
-              className="text-body-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Experience
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#projects"
-              className="text-body-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#contact"
-              className="text-body-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Contact
-            </Link>
-          </li>
+          {mainNavItems.map((item) => (
+            <li key={item.href}>
+              <Link
+                href={item.href}
+                className="text-body-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
 
       <div className="flex flex-col gap-6 col-span-1">
         <div className="text-footer-heading">Projects</div>
         <ul className="flex flex-col gap-3">
-          <li>
-            <Link
-              href="#"
-              className="text-body-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              ResNet
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#"
-              className="text-body-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Pethsapp
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#"
-              className="text-body-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              YRHacks Discord Bot
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#"
-              className="text-body-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Air Hockey AI
-            </Link>
-          </li>
+          {projectLinks.map((project) => (
+            <li key={project.href}>
+              <Link
+                href={project.href}
+                className="text-body-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {project.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </footer>

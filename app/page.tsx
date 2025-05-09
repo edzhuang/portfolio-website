@@ -7,6 +7,7 @@ import { AboutItem } from "@/components/about-item";
 import { Footer } from "@/components/footer";
 import { ScrollFade } from "@/components/scroll-fade";
 import { Header } from "@/components/header";
+import { projectLinks } from "@/lib/navigation";
 
 export default function Home() {
   return (
@@ -40,7 +41,6 @@ export default function Home() {
               </p>
             </section>
           </ScrollFade>
-
           {/* About Section */}
           <ScrollFade delay={2}>
             <section id="about" className="flex flex-col gap-8">
@@ -53,7 +53,6 @@ export default function Home() {
               </div>
             </section>
           </ScrollFade>
-
           {/* Experience Section */}
           <ScrollFade delay={3}>
             <section id="experience" className="flex flex-col gap-8">
@@ -75,43 +74,24 @@ export default function Home() {
                 />
               </div>
             </section>
-          </ScrollFade>
-
+          </ScrollFade>{" "}
           {/* Projects Section */}
           <ScrollFade delay={4}>
             <section id="projects" className="flex flex-col gap-8">
               <h2 className="text-heading-lg">Projects</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 [&>*]:aspect-video">
-                <ProjectCard
-                  title="ResNet"
-                  description={
-                    'My implementation of the paper "Deep Residual Learning for Image Recognition" from scratch in PyTorch'
-                  }
-                  imageUrl="/images/resnet.png"
-                  url={"https://github.com/edzhuang/resnet"}
-                />
-                <ProjectCard
-                  title="Pethsapp"
-                  description="React Native app made for my high school to deliver announcement notifications, event updates, and general school information"
-                  imageUrl="/images/pethsapp.png"
-                  url={"https://www.tsac.ca/pethsapp"}
-                />
-                <ProjectCard
-                  title="YRHacks Discord Bot"
-                  description="Python Discord bot for YRHacks to automate participant verification and match attendees with mentors during the event"
-                  imageUrl="/images/discord.png"
-                  url={"https://github.com/yrhacks/yrhacks-discord-bot-2023"}
-                />
-                <ProjectCard
-                  title="Air Hockey AI"
-                  description="A reinforcement learning agent trained to play air hockey, made using the Unity ML-Agents toolkit"
-                  imageUrl="/images/air-hockey-ai.png"
-                  url={"https://edzhuang.itch.io/air-hockey-ai"}
-                />
+                {projectLinks.map((project) => (
+                  <ProjectCard
+                    key={project.href}
+                    title={project.label}
+                    description={project.description}
+                    imageUrl={project.imageUrl}
+                    url={project.href}
+                  />
+                ))}
               </div>
             </section>
           </ScrollFade>
-
           {/* Contact Section */}
           <ScrollFade delay={5}>
             <section
