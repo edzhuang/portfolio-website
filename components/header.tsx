@@ -1,5 +1,12 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+
+const navItems = [
+  { href: "#about", label: "About" },
+  { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+  { href: "#contact", label: "Contact" },
+];
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,6 +29,23 @@ export function Header() {
     setMobileMenuOpen(false);
   };
 
+  const renderNavLinks = (isMobile: boolean) => {
+    return navItems.map((item) => (
+      <Link
+        key={item.href}
+        href={item.href}
+        className={
+          isMobile
+            ? "text-heading-md hover:text-muted-foreground"
+            : "text-body-sm hover:text-muted-foreground"
+        }
+        onClick={isMobile ? handleNavClick : undefined}
+      >
+        {item.label}
+      </Link>
+    ));
+  };
+
   return (
     <div className="fixed z-10 left-0 right-0 top-6 flex justify-center w-full px-6">
       <header
@@ -39,30 +63,7 @@ export function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-12">
-              <Link
-                href="#about"
-                className="text-body-sm hover:text-muted-foreground"
-              >
-                About
-              </Link>
-              <Link
-                href="#experience"
-                className="text-body-sm hover:text-muted-foreground"
-              >
-                Experience
-              </Link>
-              <Link
-                href="#projects"
-                className="text-body-sm hover:text-muted-foreground"
-              >
-                Projects
-              </Link>
-              <Link
-                href="#contact"
-                className="text-body-sm hover:text-muted-foreground"
-              >
-                Contact
-              </Link>
+              {renderNavLinks(false)}
             </nav>
 
             {/* Mobile Menu Button */}
@@ -70,6 +71,7 @@ export function Header() {
               className="md:hidden flex flex-col space-y-1.5"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
+              aria-expanded={mobileMenuOpen}
             >
               <span
                 className={`block w-6 h-0.5 bg-foreground transition-all duration-300 ${
@@ -93,34 +95,7 @@ export function Header() {
           {mobileMenuOpen && (
             <div className="md:hidden overflow-hidden ease-in-out">
               <nav className="flex flex-col gap-6 mt-6">
-                <Link
-                  href="#about"
-                  className="text-heading-md hover:text-muted-foreground"
-                  onClick={handleNavClick}
-                >
-                  About
-                </Link>
-                <Link
-                  href="#experience"
-                  className="text-heading-md hover:text-muted-foreground"
-                  onClick={handleNavClick}
-                >
-                  Experience
-                </Link>
-                <Link
-                  href="#projects"
-                  className="text-heading-md hover:text-muted-foreground"
-                  onClick={handleNavClick}
-                >
-                  Projects
-                </Link>
-                <Link
-                  href="#contact"
-                  className="text-heading-md hover:text-muted-foreground"
-                  onClick={handleNavClick}
-                >
-                  Contact
-                </Link>
+                {renderNavLinks(true)}
               </nav>
             </div>
           )}
