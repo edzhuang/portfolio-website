@@ -34,7 +34,7 @@ export default function Home() {
         <div className="container flex flex-col gap-24 md:gap-36 pt-40 md:pt-48 pb-24 md:pb-36">
           {/* Hero Section */}
           <ScrollFade delay={1}>
-            <section className="flex flex-col gap-3">
+            <section className="flex flex-col gap-3 text-center md:text-left">
               <h1 className="text-heading-lg md:text-heading-xl">
                 Eddie Zhuang
               </h1>
