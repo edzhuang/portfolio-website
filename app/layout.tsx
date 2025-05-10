@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Eddie Zhuang",
-  description: "Computer science student",
+  description: "CS @ McMaster University",
 };
 
 export default function RootLayout({
