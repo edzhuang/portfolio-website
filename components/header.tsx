@@ -60,24 +60,24 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden flex flex-col space-y-1.5"
+            className="md:hidden flex flex-col space-y-1"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
             aria-expanded={mobileMenuOpen}
           >
             <span
-              className={`block w-6 h-0.5 bg-foreground transition-all duration-300 ${
-                mobileMenuOpen ? "rotate-45 translate-y-2" : ""
+              className={`block w-5 h-0.5 bg-foreground transition-all duration-300 ${
+                mobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
               }`}
             ></span>
             <span
-              className={`block w-6 h-0.5 bg-foreground transition-all duration-200 ${
+              className={`block w-5 h-0.5 bg-foreground transition-all duration-200 ${
                 mobileMenuOpen ? "opacity-0" : ""
               }`}
             ></span>
             <span
-              className={`block w-6 h-0.5 bg-foreground transition-all duration-300 ${
-                mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
+              className={`block w-5 h-0.5 bg-foreground transition-all duration-300 ${
+                mobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
               }`}
             ></span>
           </button>
