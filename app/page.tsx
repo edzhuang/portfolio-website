@@ -1,12 +1,12 @@
 "use client";
 
 import { ContactForm } from "@/components/contact-form";
-import { ProjectCard } from "@/components/project-card";
-import { ExperienceItem } from "@/components/experience-item";
-import { AboutItem } from "@/components/about-item";
+import { ProjectCard } from "@/components/ui/project-card";
+import { ExperienceItem } from "@/components/ui/experience-item";
+import { AboutItem } from "@/components/ui/about-item";
 import { Footer } from "@/components/footer";
-import { ScrollFade } from "@/components/scroll-fade";
-import { Header } from "@/components/header";
+import { ScrollFade } from "@/components/ui/scroll-fade";
+import { Header } from "@/components/ui/header";
 import { projectLinks } from "@/lib/navigation";
 
 export default function Home() {

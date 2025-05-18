@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @font-face {
   font-family: "Satoshi";
   src: url("/fonts/Satoshi-Variable.woff2") format("woff2");
-  /* variable font covers weights 100–900: */
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
