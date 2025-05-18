@@ -30,13 +30,13 @@ export function ThemeToggle() {
 
   // Now that we're mounted, `resolvedTheme` is reliable for client-side rendering
   return (
-    <button
-      onClick={cycleTheme}
-      className="rounded-full p-2 hover:bg-muted"
-      aria-label="Toggle theme"
-    >
-      {resolvedTheme === "light" && <Sun className="h-5 w-5" />}
-      {resolvedTheme === "dark" && <Moon className="h-5 w-5" />}
+    <button onClick={cycleTheme} aria-label="Toggle theme">
+      {resolvedTheme === "light" && (
+        <Sun className="h-5 w-5 text-foreground hover:text-muted-foreground transition-colors" />
+      )}
+      {resolvedTheme === "dark" && (
+        <Moon className="h-5 w-5 text-foreground hover:text-muted-foreground transition-colors" />
+      )}
     </button>
   );
 }
