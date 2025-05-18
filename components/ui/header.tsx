@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { mainNavItems } from "@/lib/navigation";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -41,7 +42,7 @@ export function Header() {
 
   return (
     <header
-      className={`container py-3 bg-secondary/70 backdrop-blur-md shadow-lg border border-gridline ${
+      className={`container flex flex-row items-center bg-secondary/70 backdrop-blur-md shadow-lg border border-gridline ${
         mobileMenuOpen
           ? "h-[calc(100dvh-2rem)] rounded-lg"
           : "h-[51px] rounded-[26px]"
@@ -54,8 +55,9 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-12">
+          <nav className="hidden md:flex items-center space-x-12">
             {renderNavLinks(false)}
+            <ThemeToggle />
           </nav>
 
           {/* Mobile Menu Button */}

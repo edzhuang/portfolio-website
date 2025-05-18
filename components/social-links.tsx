@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { SiX } from "react-icons/si";
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 export function SocialLinks() {
   return (
@@ -27,7 +26,7 @@ export function SocialLinks() {
         rel="noopener noreferrer"
         aria-label="X"
       >
-        <SiX className="w-7 h-7 text-foreground hover:text-muted-foreground transition-colors" />
+        <FaXTwitter className="w-7 h-7 text-foreground hover:text-muted-foreground transition-colors" />
       </Link>
     </div>
   );
