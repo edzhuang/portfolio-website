@@ -42,7 +42,7 @@ export function Header() {
 
   return (
     <header
-      className={`container flex flex-row items-center bg-secondary/70 backdrop-blur-md shadow-lg border border-gridline ${
+      className={`container flex flex-row items-center bg-secondary/70 backdrop-blur-md border ${
         mobileMenuOpen
           ? "h-[calc(100dvh-2rem)] rounded-lg"
           : "h-[51px] rounded-[26px]"

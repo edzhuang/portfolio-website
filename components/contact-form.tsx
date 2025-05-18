@@ -71,7 +71,7 @@ export function ContactForm() {
         placeholder="Name"
         value={formData.name}
         onChange={handleChange}
-        className="bg-card border-gridline"
+        className="bg-card border"
       />
       <Input
         type="email"
@@ -79,14 +79,14 @@ export function ContactForm() {
         placeholder="Email"
         value={formData.email}
         onChange={handleChange}
-        className="bg-card border-gridline"
+        className="bg-card border"
       />
       <Textarea
         name="message"
         placeholder="Message"
         value={formData.message}
         onChange={handleChange}
-        className="bg-card border-gridline min-h-40"
+        className="bg-card border min-h-40"
       />
       {submitStatus.type && (
         <div
@@ -101,7 +101,7 @@ export function ContactForm() {
       )}
       <Button
         type="submit"
-        className="bg-primary hover:bg-primary/80 text-primary-foreground border border-gridline px-6 py-3 h-min"
+        className="bg-primary hover:bg-primary/80 text-primary-foreground border px-6 py-3 h-min"
         disabled={isSubmitting}
       >
         {isSubmitting ? "Sending..." : "Send"}

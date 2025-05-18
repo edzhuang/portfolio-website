@@ -47,7 +47,7 @@ export function ExperienceItem({
           alt={organization}
           width={56}
           height={56}
-          className="w-14 h-14 object-cover rounded-lg overflow-hidden border border-gridline"
+          className="w-14 h-14 object-cover rounded-lg overflow-hidden border"
         />
       </div>
     </div>

@@ -18,7 +18,7 @@ export function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div className={`flex flex-col gap-4 ${className}`}>
-      <div className="rounded-3xl overflow-hidden border border-gridline">
+      <div className="rounded-3xl overflow-hidden border">
         {url ? (
           <Link href={url}>
             <Image
