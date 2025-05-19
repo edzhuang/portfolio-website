@@ -6,12 +6,14 @@ export function Footer() {
   return (
     <footer className="container grid grid-cols-2 md:grid-cols-4 px-6 pt-12 pb-24 gap-12 border-t relative">
       <div className="flex flex-col gap-6 col-span-2">
-        <Link
-          href=""
-          className="text-heading-sm text-foreground hover:text-muted-foreground transition-colors"
-        >
-          Eddie Zhuang
-        </Link>
+        <div>
+          <Link
+            href=""
+            className="text-heading-sm text-foreground hover:text-muted-foreground transition-colors"
+          >
+            Eddie Zhuang
+          </Link>
+        </div>
         <SocialLinks />
       </div>
 
