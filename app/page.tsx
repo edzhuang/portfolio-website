@@ -45,8 +45,10 @@ export default function Home() {
           </ScrollFade>
           {/* About Section */}
           <ScrollFade delay={2}>
-            <section id="about" className="flex flex-col gap-8 py-6 md:py-8">
-              <h2 className="text-heading-md md:text-heading-lg">About</h2>
+            <section className="flex flex-col gap-8 py-6 md:py-8">
+              <h2 id="about" className="text-heading-md md:text-heading-lg">
+                About
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
                 <AboutItem text="I'm a computer science student at McMaster University" />
                 <AboutItem text="I have experience with full-stack development and machine learning" />
@@ -57,11 +59,13 @@ export default function Home() {
           </ScrollFade>
           {/* Experience Section */}
           <ScrollFade delay={3}>
-            <section
-              id="experience"
-              className="flex flex-col gap-8 py-12 md:py-16"
-            >
-              <h2 className="text-heading-md md:text-heading-lg">Experience</h2>
+            <section className="flex flex-col gap-8 py-12 md:py-16">
+              <h2
+                id="experience"
+                className="text-heading-md md:text-heading-lg"
+              >
+                Experience
+              </h2>
               <div className="flex flex-col gap-16">
                 <ExperienceItem
                   years="2024"
@@ -82,11 +86,10 @@ export default function Home() {
           </ScrollFade>{" "}
           {/* Projects Section */}
           <ScrollFade delay={4}>
-            <section
-              id="projects"
-              className="flex flex-col gap-8 py-12 md:py-16"
-            >
-              <h2 className="text-heading-md md:text-heading-lg">Projects</h2>
+            <section className="flex flex-col gap-8 py-12 md:py-16">
+              <h2 id="projects" className="text-heading-md md:text-heading-lg">
+                Projects
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 [&>*]:aspect-video">
                 {projectLinks.map((project) => (
                   <ProjectCard
@@ -102,12 +105,11 @@ export default function Home() {
           </ScrollFade>
           {/* Contact Section */}
           <ScrollFade delay={5}>
-            <section
-              id="contact"
-              className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 py-28 md:py-32"
-            >
+            <section className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 py-28 md:py-32">
               <div className="flex flex-col gap-4">
-                <h2 className="text-heading-md md:text-heading-lg">Contact</h2>
+                <h2 id="contact" className="text-heading-md md:text-heading-lg">
+                  Contact
+                </h2>
                 <p className="text-body-sm md:text-body-md text-muted-foreground mb-2">
                   Have an opportunity in mind, or just want to chat? <br />
                   Feel free to send me a message.
