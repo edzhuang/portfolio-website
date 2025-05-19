@@ -6,7 +6,7 @@ import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Eddie Zhuang",
-  description: "CS @ McMaster University",
+  description: "Computer science at McMaster",
 };
 
 export default function RootLayout({

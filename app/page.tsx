@@ -39,7 +39,7 @@ export default function Home() {
                 Eddie Zhuang
               </h1>
               <p className="text-heading-sm md:text-heading-md text-muted-foreground">
-                CS @ McMaster University
+                Computer science at McMaster
               </p>
             </section>
           </ScrollFade>

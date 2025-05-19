@@ -41,7 +41,7 @@ export function ExperienceItem({
       </div>
 
       {/* Image column */}
-      <div className="col-span-1 flex order-1 md:order-2">
+      <div className="col-span-1 flex order-1 md:order-2 justify-start md:justify-end">
         <Image
           src={imageUrl || "/placeholder.svg"}
           alt={organization}
