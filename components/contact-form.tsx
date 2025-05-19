@@ -71,7 +71,6 @@ export function ContactForm() {
         placeholder="Name"
         value={formData.name}
         onChange={handleChange}
-        className="bg-input border"
       />
       <Input
         type="email"
@@ -79,14 +78,13 @@ export function ContactForm() {
         placeholder="Email"
         value={formData.email}
         onChange={handleChange}
-        className="bg-input border"
       />
       <Textarea
         name="message"
         placeholder="Message"
         value={formData.message}
         onChange={handleChange}
-        className="bg-input border min-h-40"
+        className="min-h-40"
       />
       {submitStatus.type && (
         <div

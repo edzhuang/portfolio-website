@@ -18,7 +18,7 @@ export default function Home() {
           {/* 5 vertical lines */}
           <div className="absolute left-0 h-full border-l" />
           <div className="absolute left-1/4 h-full border-l border-dashed hidden md:block" />
-          <div className="absolute left-2/4 h-full border-l border-dashed" />
+          <div className="absolute left-2/4 h-full border-l border-dashed hidden md:block" />
           <div className="absolute left-3/4 h-full border-l border-dashed hidden md:block" />
           <div className="absolute right-0 h-full border-l" />
         </div>

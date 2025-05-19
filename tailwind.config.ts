@@ -39,7 +39,10 @@ const config = {
         "5/6": "83.333333%",
       },
       colors: {
-        border: "hsl(var(--border))",
+        border: {
+          DEFAULT: "hsl(var(--border))",
+          darker: "hsl(var(--border-darker))",
+        },
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
