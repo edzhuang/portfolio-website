@@ -1,19 +1,6 @@
 const { PLACE_URL } = process.env;
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  async rewrites() {
-    return [
-      {
-        source: "/place",
-        destination: `${PLACE_URL}/place`,
-      },
-      {
-        source: "/place/:path+",
-        destination: `${PLACE_URL}/place/:path+`,
-      },
-    ];
-  },
-};
+const nextConfig = {};
 
 module.exports = nextConfig;
