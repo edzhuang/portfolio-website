@@ -10,7 +10,7 @@ const nextConfig = {
       },
       {
         source: "/place/:path+",
-        destination: `${PLACE_URL}/blog/:path+`,
+        destination: `${PLACE_URL}/place/:path+`,
       },
     ];
   },
