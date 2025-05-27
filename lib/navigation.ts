@@ -12,6 +12,13 @@ export const mainNavItems = [
 // Project links - centralized for consistency
 export const projectLinks = [
   {
+    href: "https://place-app.com",
+    label: "Place",
+    description:
+      "A recreation of Reddit's r/place, a realtime online collaborative canvas built with Next.js and Supabase",
+    imageUrl: "/images/place.png",
+  },
+  {
     href: "https://github.com/edzhuang/resnet",
     label: "ResNet",
     description:
