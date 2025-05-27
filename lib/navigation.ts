@@ -37,7 +37,7 @@ export const projectLinks = [
     label: "YRHacks Discord Bot",
     description:
       "Python Discord bot for YRHacks to automate participant verification and match attendees with mentors during the event",
-    imageUrl: "/images/discord.png",
+    imageUrl: "/images/yrhacks-bot.png",
   },
   {
     href: "https://edzhuang.itch.io/air-hockey-ai",
