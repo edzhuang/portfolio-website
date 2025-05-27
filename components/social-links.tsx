@@ -21,7 +21,7 @@ export function SocialLinks() {
         <FaLinkedin className="w-7 h-7 text-foreground hover:text-muted-foreground transition-colors" />
       </Link>
       <Link
-        href="https://x.com/senkei1589"
+        href="https://x.com/edzhuan"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="X"
