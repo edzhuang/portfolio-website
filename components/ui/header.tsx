@@ -42,11 +42,12 @@ export function Header() {
 
   return (
     <header
-      className={`container flex flex-col py-2 bg-muted/70 backdrop-blur-md border ${
+      className={`fixed z-50 top-4 md:top-6 left-1/2 -translate-x-1/2 transition-[top] duration-300 container flex flex-col py-2 bg-muted/70 backdrop-blur-md border ${
         mobileMenuOpen
           ? "h-[calc(100dvh-2rem)] rounded-lg"
           : "h-[52px] rounded-[26px]"
       } transition-[border-radius,height] duration-300 ease-in-out overflow-hidden`}
+      style={{ width: "min(100dvw - 2rem, 1080px)" }}
     >
       {/* Main Row */}
       <div className="flex h-[34px] items-center justify-between flex-shrink-0">
@@ -67,7 +68,6 @@ export function Header() {
           aria-label="Toggle menu"
           aria-expanded={mobileMenuOpen}
         >
-          {" "}
           <span
             className={`block w-5 h-0.5 bg-foreground transition-all duration-300 ${
               mobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
@@ -89,9 +89,7 @@ export function Header() {
       {/* Mobile Menu Container with CSS transition */}
       <div
         className={`md:hidden flex-1 flex flex-col overflow-y-auto transition-opacity duration-300 ease-in-out ${
-          mobileMenuOpen
-            ? "opacity-100"
-            : "opacity-0 invisible pointer-events-none"
+          mobileMenuOpen ? "opacity-100" : "opacity-0"
         }`}
       >
         <nav className="flex flex-col gap-6 mt-6">{renderNavLinks(true)}</nav>

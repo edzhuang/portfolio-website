@@ -25,9 +25,7 @@ export default function Home() {
       </div>
 
       {/* Header/Navigation - Floating with blur effect */}
-      <div className="fixed z-10 left-0 right-0 pt-4 md:pt-6 transition-[padding] duration-300 flex justify-center w-full px-4">
-        <Header />
-      </div>
+      <Header />
 
       {/* Content Container */}
       <div className="w-full px-4">
@@ -52,7 +50,7 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
                 <AboutItem text="I'm a computer science student at McMaster University" />
                 <AboutItem text="I have experience with full-stack development and machine learning" />
-                <AboutItem text="Right now, I’m working on full-stack projects and searching for software engineering internships" />
+                <AboutItem text="Right now, I'm working on full-stack projects and searching for software engineering internships" />
                 <AboutItem text="In the past, I've worked with genetic algorithms as a research assistant and organized a hackathon" />
               </div>
             </section>
@@ -83,7 +81,7 @@ export default function Home() {
                 />
               </div>
             </section>
-          </ScrollFade>{" "}
+          </ScrollFade>
           {/* Projects Section */}
           <ScrollFade delay={4}>
             <section className="flex flex-col gap-8 py-12 md:py-16">
