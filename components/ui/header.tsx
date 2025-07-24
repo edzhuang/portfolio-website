@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { mainNavItems } from "@/lib/navigation";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import clsx from "clsx";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -42,11 +43,11 @@ export function Header() {
 
   return (
     <header
-      className={`fixed z-50 top-4 md:top-6 left-1/2 -translate-x-1/2 transition-[top] duration-300 container flex flex-col py-2 bg-muted/70 backdrop-blur-md border ${
-        mobileMenuOpen
-          ? "h-[calc(100dvh-2rem)] rounded-lg"
-          : "h-[52px] rounded-[26px]"
-      } transition-[border-radius,height] duration-300 ease-in-out overflow-hidden`}
+      className={clsx(
+        "fixed z-50 top-4 md:top-6 left-1/2 -translate-x-1/2 transition-[top,border-radius,height] duration-300 ease-in-out overflow-hidde container flex flex-col py-2 bg-muted/70 backdrop-blur-md border",
+        mobileMenuOpen && "h-[calc(100dvh-2rem)] rounded-lg",
+        !mobileMenuOpen && "h-[52px] rounded-[26px]"
+      )}
       style={{ width: "min(100dvw - 2rem, 1080px)" }}
     >
       {/* Main Row */}
