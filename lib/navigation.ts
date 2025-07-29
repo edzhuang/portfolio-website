@@ -12,10 +12,16 @@ export const mainNavItems = [
 // Project links - centralized for consistency
 export const projectLinks = [
   {
+    href: "https://www.typeset.im",
+    label: "Typeset",
+    description: "The first AI-powered, collaborative, online LaTeX editor",
+    imageUrl: "/images/typeset.png",
+  },
+  {
     href: "https://place-app.com",
     label: "Place",
     description:
-      "A recreation of Reddit's r/place, a realtime online collaborative canvas built with Next.js and Supabase",
+      "A recreation of Reddit's r/place, a realtime online collaborative canvas.",
     imageUrl: "/images/place.png",
   },
   {
