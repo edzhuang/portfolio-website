@@ -18,13 +18,6 @@ export const projectLinks = [
     imageUrl: "/images/typeset.png",
   },
   {
-    href: "https://place-app.com",
-    label: "Place",
-    description:
-      "A recreation of Reddit's r/place, a realtime online collaborative canvas.",
-    imageUrl: "/images/place.png",
-  },
-  {
     href: "https://github.com/edzhuang/resnet",
     label: "ResNet",
     description:
